@@ -1,0 +1,414 @@
+Dark Kl, [07-11-2025 10:42]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career Guidance and Counseling Platform</title>
+
+  <!-- Suggestion: add a Content-Security-Policy header on your server for extra security -->
+  <style>
+    /* Reset & base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :focus { outline: 3px solid #80cbc4; outline-offset: 2px; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #e3f2fd, #f1f8e9);
+      color: #263238;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 40px;
+    }
+
+    /* Navbar */
+    nav[role="navigation"] {
+      background: linear-gradient(90deg, #00695c, #26a69a);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo { color: #fff; font-weight:700; letter-spacing:1px; font-size:1rem; }
+    .nav-links { display:flex; gap:18px; list-style:none; }
+    .nav-links a { color: #fff; text-decoration:none; font-size:.95rem; }
+    .nav-links a:hover, .nav-links a:focus { color: #ffeb3b; }
+
+    header {
+      background: linear-gradient(90deg, #00897b, #4db6ac);
+      color: white;
+      padding: 48px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+      margin-bottom: 20px;
+    }
+    header h1 { font-size: 28px; margin-bottom:6px; }
+    header p { font-size: 15px; opacity: 0.95; }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: #fff;
+      padding:24px;
+      border-radius:10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      margin-bottom:20px;
+    }
+
+    h2 {
+      color: #00695c;
+      border-left: 6px solid #26a69a;
+      padding-left:12px;
+      margin-bottom:14px;
+      font-size:20px;
+    }
+
+    p { margin-bottom:14px; font-size:15px; color:#37474f; }
+
+    ul.feature-list { margin-left:18px; margin-top:10px; }
+    ul.feature-list li {
+      margin-bottom:10px; padding:10px; background:#f4f9ff; border-left:4px solid #26a69a;
+      border-radius:6px;
+    }
+
+    /* Form */
+    .form-box label { display:block; font-weight:600; margin-top:10px; margin-bottom:6px; font-size:14px; }
+    .form-box input[type="text"], .form-box select {
+      padding:10px; width:100%; border:1px solid #cfd8dc; border-radius:6px; font-size:14px;
+    }
+    .actions { display:flex; gap:8px; margin-top:12px; }
+    button.btn {
+      padding:10px 14px; border-radius:6px; border:none; cursor:pointer; font-weight:600;
+      background:#26a69a; color:#fff; min-width:120px;
+    }
+    button.btn[disabled] { opacity:0.7; cursor:progress; }
+
+    .status { margin-top:12px; font-size:14px; color:#00695c; font-weight:600; }
+
+    /* Users list */
+    #usersList { margin-top:12px; list-style:none; padding-left:0; }
+    #usersList li { padding:8px 10px; border:1px solid #e0f2f1; border-radius:6px; margin-bottom:8px; background:#fafafa; }
+
+    footer { background:#004d40; color:#fff; text-align:center; padding:16px; border-radius:6px; margin-top:20px; font-size:14px; }
+    @media (min-width:900px) {
+      header h1 { font-size:36px; }
+    }
+
+    /* small spinner */
+    .spinner {
+      display:inline-block; width:16px; height:16px; border-radius:50%;
+      border:2px solid rgba(255,255,255,0.25); border-top-color:rgba(255,255,255,0.9);
+      animation:spin 0.8s linear infinite; vertical-align:middle; margin-left:8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="logo">Career Guide</div>
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a role="menuitem" href="#home">Home</a></li>
+      <li role="none"><a role="menuitem" href="#admin">Admin</a></li>
+      <li role="none"><a role="menuitem" href="#user">User</a></li>
+
+Dark Kl, [07-11-2025 10:42]
+r</a></li>
+      <li role="none"><a role="menuitem" href="#about">About</a></li>
+      <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home" class="wrap">
+    <h1>Career Guidance and Counseling Platform</h1>
+    <p>Frontend Development — student-focused career advice & mentorship</p>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card" id="about">
+      <h2>Project Description</h2>
+      <p>
+        Develop a web application that offers career advice and mentorship to students.
+        The platform should provide resources on career paths, connect students with counselors,
+        and help them make informed decisions based on their interests and skills.
+      </p>
+    </section>
+
+    <section class="card" id="admin">
+      <h2>Admin Features</h2>
+      <ul class="feature-list" aria-label="Admin features">
+        <li>Manage career resources</li>
+        <li>Connect students with counsellors</li>
+        <li>Track user engagement</li>
+      </ul>
+    </section>
+
+    <section class="card" id="user">
+      <h2>User Features</h2>
+      <ul class="feature-list" aria-label="User features">
+        <li>Access career advice</li>
+        <li>Schedule counseling sessions</li>
+        <li>Explore career paths</li>
+      </ul>
+
+      <form id="userForm" class="form-box" aria-labelledby="save-heading" novalidate>
+        <h3 id="save-heading">Save Your Details</h3>
+
+        <label for="username">Name</label>
+        <input id="username" name="username" type="text" placeholder="Enter your name" required aria-required="true" />
+
+        <label for="role">Role</label>
+        <select id="role" name="role" aria-label="Select role">
+          <option value="User">User</option>
+          <option value="Admin">Admin</option>
+        </select>
+
+        <div class="actions">
+          <button id="saveBtn" class="btn" type="submit">Save</button>
+          <button id="refreshBtn" class="btn" type="button">Refresh Users</button>
+        </div>
+
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+
+        <div id="usersContainer" aria-live="polite" aria-atomic="true">
+          <h4 style="margin-top:16px; margin-bottom:8px;">All Users</h4>
+          <ul id="usersList" aria-label="Registered users"></ul>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact" class="wrap">
+    <p>© 2025 Career Guidance Platform | Designed for Students</p>
+  </footer>
+
+  <script>
+    // Use a relative path by default (works in production behind a reverse proxy).
+    // For local development you can set API_BASE to "http://localhost:5000/api"
+    // NOTE: For production use HTTPS and proper CORS configuration on the server.
+    const API_BASE = "/api";
+    const saveForm = document.getElementById("userForm");
+    const saveBtn = document.getElementById("saveBtn");
+    const refreshBtn = document.getElementById("refreshBtn");
+    const statusEl = document.getElementById("status");
+    const usersList = document.getElementById("usersList");
+
+    function setStatus(message, isError = false, showSpinner = false) {
+      statusEl.textContent = message || "";
+      statusEl.style.color = isError ? "#b00020" : "#00695c";
+      if (showSpinner) {
+        const s = document.createElement("span");
+        s.className = "spinner";
+        statusEl.appendChild(s);
+      }
+    }
+
+    // Render users safely using textContent to avoid XSS
+    function renderUsers(users) {
+      usersList.innerHTML = "";
+      if (!Array.isArray(users) || users.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No users found.";
+        usersList.appendChild(li);
+        return;
+      }
+      users.forEach(u => {
+        const li = document.createElement("li");
+        // ensure fields exist
+        const name = u.name ?? "(no name)";
+        const role = u.role ?? "User";
+        li.textContent = `${name} (${role})`;
+        usersList.appendChild(li);
+      });
+    }
+
+    // Timeout-enabled fetch using AbortController
+    async function
+
+Dark Kl, [07-11-2025 10:42]
+fetchWithTimeout(resource, options = {}, timeout = 8000) {
+      const controller = new AbortController();
+      options.signal = controller.signal;
+      const id = setTimeout(() => controller.abort(), timeout);
+      try {
+        const res = await fetch(resource, options);
+        clearTimeout(id);
+        return res;
+      } catch (err) {
+        clearTimeout(id);
+        throw err;
+      }
+    }
+
+    async function loadUsers() {
+      setStatus("Loading users...", false, true);
+      try {
+        const res = await fetchWithTimeout(`${API_BASE}/users`, {}, 8000);
+        if (!res.ok) throw new Error(`Server returned ${res.status}`);
+        const data = await res.json();
+        renderUsers(data);
+        setStatus(`Loaded ${Array.isArray(data) ? data.length : 0} users.`);
+      } catch (err) {
+        console.error("loadUsers error:", err);
+        renderUsers([]);
+        setStatus("Could not load users. Check server/CORS.", true);
+      }
+    }
+
+    saveForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById("username");
+      const roleInput = document.getElementById("role");
+      const name = (nameInput.value || "").trim();
+      const role = roleInput.value || "User";
+
+      if (!name) {
+        setStatus("Please enter your name.", true);
+        nameInput.focus();
+        return;
+      }
+
+      saveBtn.disabled = true;
+      setStatus("Saving user...", false, true);
+
+      try {
+        const res = await fetchWithTimeout(`${API_BASE}/users`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, role })
+        }, 10000);
+
+        const body = await (res.headers.get("content-type")?.includes("application/json") ? res.json() : Promise.resolve(null));
+
+        if (!res.ok) {
+          const msg = body?.error || `Server error (${res.status})`;
+          throw new Error(msg);
+        }
+
+        // success
+        setStatus(`Saved! Welcome ${body.user?.name ?? name} (${body.user?.role ?? role})`);
+        nameInput.value = "";
+        await loadUsers();
+      } catch (err) {
+        console.error("saveData error:", err);
+        const message = err.name === "AbortError" ? "Request timed out." : (err.message || "Could not save user.");
+        setStatus(message, true);
+      } finally {
+        saveBtn.disabled = false;
+      }
+    });
+
+    refreshBtn.addEventListener("click", () => {
+      loadUsers();
+    });
+
+    // Load users on page load
+    window.addEventListener("DOMContentLoaded", loadUsers);
+  </script>
+</body>
+</html>
+
+Dark Kl, [07-11-2025 10:42]
+// server.js
+const express = require("express");
+const helmet = require("helmet");
+const cors = require("cors");
+const rateLimit = require("express-rate-limit");
+const sqlite3 = require("sqlite3").verbose();
+const path = require("path");
+
+const PORT = process.env.PORT || 5000;
+const DB_FILE = process.env.DB_FILE || path.join(__dirname, "data.db");
+const NODE_ENV = process.env.NODE_ENV || "production";
+
+const app = express();
+
+app.use(helmet());
+app.use(express.json({ limit: "5kb" }));
+
+// In this setup we serve frontend from same origin, so CORS isn't strictly required for production,
+// but keeping it permissive for dev / other origins. Tighten in production.
+app.use(cors({ origin: true }));
+
+const limiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 60,
+  standardHeaders: true,
+  legacyHeaders: false
+});
+app.use(limiter);
+
+// --- SQLite init (same as before) ---
+const db = new sqlite3.Database(DB_FILE, (err) => {
+  if (err) {
+    console.error("Failed to open DB:", err);
+    process.exit(1);
+  }
+  console.log("Connected to DB:", DB_FILE);
+});
+
+db.serialize(() => {
+  db.run(`CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    role TEXT NOT NULL,
+    created_at TEXT NOT NULL
+  );`);
+});
+
+// validation helper (same as prior)
+function validateAndSanitizeUser(payload) {
+  if (!payload || typeof payload !== "object") return { ok: false, error: "Invalid payload" };
+  let name = String(payload.name ?? "").trim();
+  let role = String(payload.role ?? "User").trim();
+  if (!name) return { ok: false, error: "Name is required" };
+  if (name.length > 100) name = name.slice(0, 100);
+  const allowedRoles = new Set(["User", "Admin"]);
+  if (!allowedRoles.has(role)) role = "User";
+  name = name.replace(/[\x00-\x1F\x7F]/g, "");
+  return { ok: true, user: { name, role } };
+}
+
+// --- API routes ---
+app.get("/api/users", (req, res) => {
+  db.all("SELECT id, name, role, created_at FROM users ORDER BY id DESC LIMIT 1000", (err, rows) => {
+    if (err) return res.status(500).json({ error: "Database error" });
+    res.json(rows || []);
+  });
+});
+
+app.post("/api/users", (req, res) => {
+  const result = validateAndSanitizeUser(req.body);
+  if (!result.ok) return res.status(400).json({ error: result.error });
+  const { name, role } = result.user;
+  const created_at = new Date().toISOString();
+  db.run("INSERT INTO users (name, role, created_at) VALUES (?, ?, ?)", [name, role, created_at], function (err) {
+    if (err) return res.status(500).json({ error: "Database error while saving user" });
+    const user = { id: this.lastID, name, role, created_at };
+    return res.status(201).json({ user });
+  });
+});
+
+app.get("/api/health", (req, res) => res.json({ status: "ok", env: NODE_ENV }));
+
+// --- Serve static frontend from /public ---
+const publicPath = path.join(__dirname, "public");
+app.use(express.static(publicPath));
+
+// If using client-side routing (SPA) - fallback to index.html for unknown non-API routes:
+app.get("*", (req, res, next) => {
+  if (req.path.startsWith("/api/")) return next();
+  res.sendFile(path.join(publicPath, "index.html"));
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server listening on http://localhost:${PORT} (env=${NODE_ENV})`);
+});
